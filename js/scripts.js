@@ -2,23 +2,21 @@ let myLibrary = [];
 
 let totalBooks = 0;
 
-function Book(bookId){
-    this.bookId;
-    this.name;
-    this.author;
-    this.pageCount;
+function Book(name, author, pageCount){
+    this.name = name;
+    this.author = author;
+    this.pageCount = pageCount;
 }
 
 function addBookToLibrary(){
-    let bookId = new Book();
+    let name = prompt("Book name");
+    let author = prompt("Author");
+    let pageCount = prompt("Number of pages");
 
-    let name = new Book(prompt("Book name"));
+    const newBook = new Book(name, author, pageCount);
 
-    let author = prompt("Author name");
-    let pageCount = prompt("Page count");
-
-    name.author = author;
-    name.pageCount = pageCount;
-
+    myLibrary.push(newBook);
     totalBooks++;
 }
+
+addBookToLibrary();
