@@ -1,3 +1,5 @@
+addButton = document.getElementById('addButton');
+
 let myLibrary = [];
 
 let totalBooks = 0;
@@ -19,4 +21,6 @@ function addBookToLibrary(){
     totalBooks++;
 }
 
-addBookToLibrary();
+addButton.addEventListener('click', function(){
+    addBookToLibrary();
+})
